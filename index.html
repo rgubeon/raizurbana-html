@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Raíz Urbana — Nuevas vidas para lugares con historia</title>
+<link rel="icon" href="assets/isotipo-terracota.svg">
+<link rel="stylesheet" href="assets/colors_and_type.css">
+<link rel="stylesheet" href="raiz-v2.css?v=1">
+<!-- Resources referenced as strings inside JSX (bundler can't auto-discover these) -->
+<meta name="ext-resource-dependency" content="assets/isotipo-terracota.svg" data-resource-id="assets/isotipo-terracota.svg" />
+<meta name="ext-resource-dependency" content="assets/logo-horizontal-white.svg" data-resource-id="assets/logo-horizontal-white.svg" />
+<meta name="ext-resource-dependency" content="assets/logo-horizontal-black.svg" data-resource-id="assets/logo-horizontal-black.svg" />
+<meta name="ext-resource-dependency" content="uploads/obras-despues-01a.jpg" data-resource-id="uploads/obras-despues-01a.jpg" />
+<meta name="ext-resource-dependency" content="uploads/obras-despues-01.jpg" data-resource-id="uploads/obras-despues-01.jpg" />
+<meta name="ext-resource-dependency" content="uploads/obras-despues-02.jpg" data-resource-id="uploads/obras-despues-02.jpg" />
+<meta name="ext-resource-dependency" content="uploads/obras-despues-03.jpg" data-resource-id="uploads/obras-despues-03.jpg" />
+<meta name="ext-resource-dependency" content="uploads/interior-01.avif" data-resource-id="uploads/interior-01.avif" />
+<meta name="ext-resource-dependency" content="uploads/hero-teatro.jpg" data-resource-id="uploads/hero-teatro.jpg" />
+<meta name="ext-resource-dependency" content="uploads/obras-antes-01.jpg" data-resource-id="uploads/obras-antes-01.jpg" />
+<meta name="ext-resource-dependency" content="uploads/obras-antes-02.jpg" data-resource-id="uploads/obras-antes-02.jpg" />
+<meta name="ext-resource-dependency" content="uploads/obras-antes-03.jpg" data-resource-id="uploads/obras-antes-03.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-antes-01.jpg" data-resource-id="uploads/calderon-antes-01.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-antes-02.jpg" data-resource-id="uploads/calderon-antes-02.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-antes-03.jpg" data-resource-id="uploads/calderon-antes-03.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-antes-04.jpg" data-resource-id="uploads/calderon-antes-04.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-antes-06.jpg" data-resource-id="uploads/calderon-antes-06.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-antes-07.jpg" data-resource-id="uploads/calderon-antes-07.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-antes-08.jpg" data-resource-id="uploads/calderon-antes-08.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-antes-09.jpg" data-resource-id="uploads/calderon-antes-09.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-despues-01.jpg" data-resource-id="uploads/calderon-despues-01.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-despues-02.jpg" data-resource-id="uploads/calderon-despues-02.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-despues-03.jpg" data-resource-id="uploads/calderon-despues-03.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-despues-04.jpg" data-resource-id="uploads/calderon-despues-04.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-despues-06.jpg" data-resource-id="uploads/calderon-despues-06.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-despues-07.jpg" data-resource-id="uploads/calderon-despues-07.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-despues-08.jpg" data-resource-id="uploads/calderon-despues-08.jpg" />
+<meta name="ext-resource-dependency" content="uploads/calderon-despues-09.jpg" data-resource-id="uploads/calderon-despues-09.jpg" />
+<meta name="ext-resource-dependency" content="uploads/box-antes-01.jpg" data-resource-id="uploads/box-antes-01.jpg" />
+<meta name="ext-resource-dependency" content="uploads/box-despues-01.jpg" data-resource-id="uploads/box-despues-01.jpg" />
+<meta name="ext-resource-dependency" content="uploads/box-despues-02.jpg" data-resource-id="uploads/box-despues-02.jpg" />
+<meta name="ext-resource-dependency" content="uploads/box-despues-03.jpg" data-resource-id="uploads/box-despues-03.jpg" />
+<meta name="ext-resource-dependency" content="uploads/box-despues-04.jpg" data-resource-id="uploads/box-despues-04.jpg" />
+<meta name="ext-resource-dependency" content="uploads/box-despues-05.jpg" data-resource-id="uploads/box-despues-05.jpg" />
+<meta name="ext-resource-dependency" content="uploads/jerez-antes-01.jpg" data-resource-id="uploads/jerez-antes-01.jpg" />
+<meta name="ext-resource-dependency" content="uploads/jerez-antes-02.jpg" data-resource-id="uploads/jerez-antes-02.jpg" />
+<meta name="ext-resource-dependency" content="uploads/jerez-antes-03.jpg" data-resource-id="uploads/jerez-antes-03.jpg" />
+<meta name="ext-resource-dependency" content="uploads/jerez-despues-01.png" data-resource-id="uploads/jerez-despues-01.png" />
+<meta name="ext-resource-dependency" content="uploads/jerez-despues-02.png" data-resource-id="uploads/jerez-despues-02.png" />
+<meta name="ext-resource-dependency" content="uploads/jerez-despues-03.png" data-resource-id="uploads/jerez-despues-03.png" />
+<script>
+  /* Resolve a resource path to its inlined blob URL when bundled standalone,
+     otherwise return the original path (live version). */
+  window.RES = function (p) { return (window.__resources && window.__resources[p]) || p; };
+</script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#D85B2F">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#FAF5EC" stroke-width="14" stroke-linecap="round">
+      <path d="M600 250 L600 560" />
+      <path d="M600 560 C600 470 470 470 410 410" />
+      <path d="M600 560 C600 470 730 470 790 410" />
+      <path d="M600 470 C600 410 500 410 450 360" />
+      <path d="M600 470 C600 410 700 410 750 360" />
+    </g>
+    <circle cx="600" cy="250" r="34" fill="#FAF5EC" />
+  </svg>
+</template>
+<div id="root"></div>
+<script type="text/babel" src="sections/hero-v2.jsx?v=1"></script>
+<script type="text/babel" src="sections/manifiesto-v2.jsx?v=1"></script>
+<script type="text/babel" src="sections/impacto-v2.jsx?v=1"></script>
+<script type="text/babel" src="sections/contacto-v2.jsx?v=1"></script>
+<script type="text/babel" src="app-v2.jsx?v=1"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  function refreshIcons(){ window.lucide && window.lucide.createIcons(); }
+  window.addEventListener('load', () => setTimeout(refreshIcons, 300));
+</script>
+</body>
+</html>

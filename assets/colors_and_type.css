@@ -1,0 +1,195 @@
+/* ============================================================
+   RAÍZ URBANA — Colors & Type Foundations
+   Derived from the official "Branding · Raíz Urbana" logo guide.
+   Palette (PRINCIPALES + SECUNDARIOS) extracted directly from
+   the brand PDF's color page.
+   ============================================================ */
+
+/* --- Fonts ---------------------------------------------------
+   The wordmark is a geometric, single-story-'a' sans (Futura
+   family). The brand guide ships no named typeface, so we
+   substitute the closest free matches:
+     · Poppins        → display / headings (geometric sans, matches the mark)
+     · Hanken Grotesk → body / UI (readable neutral grotesque)
+   SUBSTITUTION — swap for the real brand font if provided.
+   ------------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---------- PRINCIPALES (primary) ---------- */
+  --terracota:   #D85B2F;   /* primary brand color — the mark */
+  --edificio:    #000000;   /* brand ink / "building" black */
+  --black:       #000000;
+  --beige:       #DEB9A7;   /* warm clay beige */
+
+  /* ---------- SECUNDARIOS (secondary) ---------- */
+  --arena:       #F3E2D1;   /* soft sand / cream — primary light surface */
+  --musgo:       #737845;   /* moss green */
+  --cielo:       #658D99;   /* sky teal */
+  --tierra:      #C98A6B;   /* DERIVED deeper clay — decorative only, NOT an official brand color */
+
+  /* ---------- Terracota scale (tints/shades of brand) ---------- */
+  --terracota-700: #97380F;
+  --terracota-600: #B8471D;
+  --terracota-500: #D85B2F;  /* base */
+  --terracota-400: #E27C56;
+  --terracota-300: #ECA184;
+  --terracota-200: #F3C6B3;
+  --terracota-100: #F9E6DD;
+
+  /* ---------- Neutral / ink scale (warm-tinted) ---------- */
+  --ink-900: #000000;        /* edificio */
+  --ink-800: #1A1A1E;
+  --ink-700: #33332F;
+  --ink-600: #54534C;
+  --ink-500: #78766C;
+  --ink-400: #A19D90;
+  --ink-300: #C7C0B2;
+  --ink-200: #E2DBCC;
+  --ink-100: #F1EADD;
+  --ink-050: #FAF5EC;
+
+  /* ---------- Semantic surfaces & text ---------- */
+  --bg:        #FAF5EC;      /* default page — warm off-white */
+  --bg-beige:  #F3E2D1;      /* arena-cream surface block */
+  --bg-dark:   #000000;      /* dark section */
+  --surface:   #FFFFFF;      /* card surface */
+  --surface-2: #FBF5EC;      /* subtle raised surface */
+
+  --fg1: #000000;            /* primary text */
+  --fg2: #54534C;            /* secondary text */
+  --fg3: #A19D90;            /* tertiary / muted */
+  --fg-on-dark:    #F3E2D1;  /* text on dark */
+  --fg-on-dark-2:  #A19D90;
+
+  --border:        #E2DBCC;  /* hairline border */
+  --border-strong: #C7C0B2;
+
+  --accent:        var(--terracota);
+  --accent-hover:  var(--terracota-600);
+  --accent-press:  var(--terracota-700);
+
+  /* ---------- Semantic status (kept inside brand palette) ---------- */
+  --success: #737845;        /* musgo */
+  --info:    #658D99;        /* cielo */
+  --warning: #B8471D;        /* deep terracota */
+  --danger:  #97380F;
+
+  /* ============ TYPE ============ */
+  --font-display: 'Poppins', 'Futura', 'Century Gothic', sans-serif;
+  --font-body:    'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Display tracking — geometric sans wants slightly tight tracking */
+  --tracking-display: -0.02em;
+  --tracking-tight:   -0.01em;
+  --tracking-wide:    0.08em;  /* for small caps / eyebrows */
+
+  /* ============ SPACING (4px base) ============ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* ============ RADII ============ */
+  /* Brand direction: fully squared. All component corners are 0.
+     Tokens kept (not removed) so any author reference still resolves. */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-pill: 0;
+
+  /* ============ SHADOWS (warm, soft) ============ */
+  --shadow-xs: 0 1px 2px rgba(6,6,12,0.06);
+  --shadow-sm: 0 2px 8px rgba(6,6,12,0.07);
+  --shadow-md: 0 8px 24px rgba(6,6,12,0.09);
+  --shadow-lg: 0 20px 48px rgba(6,6,12,0.13);
+  --shadow-accent: 0 12px 28px rgba(235,93,53,0.28);
+
+  /* ============ MOTION ============ */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur: 240ms;
+  --dur-slow: 420ms;
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES
+   ============================================================ */
+.ru-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: 0.98;
+  letter-spacing: var(--tracking-display);
+  color: var(--fg1);
+}
+.ru-h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(36px, 4.5vw, 60px);
+  line-height: 1.04;
+  letter-spacing: var(--tracking-display);
+  color: var(--fg1);
+}
+.ru-h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.1;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+.ru-h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+.ru-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--terracota);
+}
+.ru-lead {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.5;
+  color: var(--fg2);
+}
+.ru-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--fg1);
+}
+.ru-small {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--fg2);
+}
+.ru-mono {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--fg2);
+}
